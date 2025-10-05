@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Roleplay - Community Rules & Guidelines</title>
+    <meta name="description" content="Official rules and guidelines for the Schedule Roleplay community">
+    <meta name="author" content="Schedule Roleplay">
+    
+    <!-- Modern CSS Framework and Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary-color: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .header-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.2s;
+        }
+        
+        .header-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Navigation */
+        .nav {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .nav-item {
+            white-space: nowrap;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Main Content */
+        .main {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .sidebar a:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content h1 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .content h2 {
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .content h3 {
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.75rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .content ul, .content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .card-icon.success { background: var(--success-color); }
+        .card-icon.warning { background: var(--warning-color); }
+        .card-icon.danger { background: var(--danger-color); }
+        .card-icon.primary { background: var(--primary-color); }
+        
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            .header-content {
+                text-align: center;
+            }
+            
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Code styling */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--secondary-color);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+    </style>
+</head>
+  
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div>
+                        <h1>Schedule Roleplay</h1>
+                        <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Community Rules & Guidelines</p>
+                    </div>
+                </div>
+                <div class="header-links">
+                    <a href="https://github.com/George00808/ScheduleRoleplay.github.io" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#contact">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#general-rules" class="nav-item">General Rules</a>
+                <a href="#roleplay-rules" class="nav-item">Roleplay Rules</a>
+                <a href="#violations" class="nav-item">Violations</a>
+                <a href="#punishments" class="nav-item">Punishments</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul>
+                    <li><a href="#general-provisions">General Provisions</a></li>
+                    <li><a href="#scope">A1 - Scope</a></li>
+                    <li><a href="#validity">A2 - Validity</a></li>
+                    <li><a href="#penalties">A3 - Penalties</a></li>
+                    <li><a href="#additional-rules">A4 - Additional Rules</a></li>
+                    <li><a href="#failrp">Article 1 - FailRP</a></li>
+                    <li><a href="#cheats">Article 2 - Cheats</a></li>
+                    <li><a href="#exploits">Article 3 - Exploits</a></li>
+                    <li><a href="#rp-disruption">Article 4 - RP Disruption</a></li>
+                    <li><a href="#metagaming">Article 5 - Metagaming</a></li>
+                    <li><a href="#professional-clothing">Article 6 - Professional Clothing</a></li>
+                </ul>
+            </aside>
+
+            <!-- Content -->
+            <main class="content">
+                <div id="home">
+                    <h1 id="algemene-plaatselijke-verordening-schedule">General Municipal Ordinance - Schedule Roleplay</h1>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon success">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <h3>Welcome to Schedule Roleplay</h3>
+                        </div>
+                        <p>This document contains the official rules and regulations for the Schedule Roleplay community. All players are expected to read and follow these guidelines to ensure a positive and enjoyable experience for everyone.</p>
+                    </div>
+
+                    <h2 id="wetstechnische-informatie">Legal-Technical Information</h2>
+                    
+                    <h3 id="opmerkingen-met-betrekking-tot-de-verordening">Notes Regarding This Ordinance</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h4>Important Notice</h4>
+                        </div>
+                        <ul>
+                            <li>All rules apply to all community members without exception</li>
+                            <li>Ignorance of the rules is not an excuse for violations</li>
+                            <li>Rules may be updated periodically - stay informed</li>
+                            <li>Severe violations may result in permanent bans</li>
+                        </ul>
+                    </div>
+
+                    <h2 id="algemene-bepalingen">General Provisions</h2>
+
+                    <h3 id="a1-reikwijdte">A1 - Scope</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon primary">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Rule Scope</h4>
+                        </div>
+                        <ol>
+                            <li>These rules apply to all players within the Schedule Roleplay server environment.</li>
+                            <li>The rules are in effect 24/7 and apply to all areas of the server.</li>
+                            <li>Community Discord and other official platforms are also subject to these rules.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="a2-geldigheid">A2 - Validity</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon primary">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4>Rule Validity</h4>
+                        </div>
+                        <ol>
+                            <li>These rules are effective immediately upon publication.</li>
+                            <li>Previous versions of rules are superseded by this document.</li>
+                            <li>Updates will be announced through official channels.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="a3-strafbepaling">A3 - Penalties</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon danger">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h4>Punishment System</h4>
+                        </div>
+                        <ol>
+                            <li>Violations are categorized into 5 categories of increasing severity.</li>
+                            <li>Punishments may include warns, kicks, temporary bans, or permanent bans.</li>
+                            <li>Repeat offenders face escalated consequences.</li>
+                            <li>Appeals can be submitted through the proper channels.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="a4-aanvullende-wetten-en-regels">A4 - Additional Laws and Rules</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon primary">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <h4>Additional Guidelines</h4>
+                        </div>
+                        <ol>
+                            <li>Server staff may implement additional temporary rules as needed.</li>
+                            <li>Common sense and respect should guide all interactions.</li>
+                            <li>When in doubt, ask a staff member for clarification.</li>
+                        </ol>
+                    </div>
+
+                    <h2 id="overtredingen-verstoring-openbare-orde-rp">Violations - Public Order Disruption (RP)</h2>
+
+                    <h3 id="artikel-1-failrp-powergaming">Article 1 - FailRP & Powergaming</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon danger">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <h4>FailRP & Powergaming - Category 1-5</h4>
+                        </div>
+                        <ol>
+                            <li>Players must always act realistically within their character.</li>
+                            <li>Powergaming (forcing actions on others) is strictly prohibited.</li>
+                            <li>Character knowledge and real-world knowledge must be separated.</li>
+                            <li>Death RP must be taken seriously - no immediate return to conflict.</li>
+                            <li>Unrealistic actions that break immersion are not allowed.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="artikel-2-cheats">Article 2 - Cheats</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon danger">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <h4>Cheating - Category 5 (Permanent Ban)</h4>
+                        </div>
+                        <ol>
+                            <li>Use of any third-party software to gain unfair advantages is prohibited.</li>
+                            <li>This includes but is not limited to: aimbots, wallhacks, speed hacks, money cheats.</li>
+                            <li>First offense results in immediate permanent ban.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="artikel-3-exploits">Article 3 - Exploits</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon warning">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h4>Exploiting - Category 2-5</h4>
+                        </div>
+                        <ol>
+                            <li>Exploiting game bugs or glitches for personal gain is prohibited.</li>
+                            <li>Report bugs to staff instead of exploiting them.</li>
+                            <li>Severity of punishment depends on the exploit used and damage caused.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="artikel-4-verstoring-rp">Article 4 - RP Disruption</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon warning">
+                                <i class="fas fa-users-slash"></i>
+                            </div>
+                            <h4>Roleplay Disruption - Category 1-3</h4>
+                        </div>
+                        <ol>
+                            <li>Intentionally disrupting others' roleplay experiences is prohibited.</li>
+                            <li>This includes trolling, griefing, and non-serious RP behavior.</li>
+                            <li>Random killing (RDM) and vehicle destruction (VDM) are forms of disruption.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="artikel-5-meta-gaming">Article 5 - Metagaming</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon danger">
+                                <i class="fas fa-eye-slash"></i>
+                            </div>
+                            <h4>Metagaming - Category 2-4</h4>
+                        </div>
+                        <ol>
+                            <li>Using out-of-character information in-character is strictly prohibited.</li>
+                            <li>This includes information from Discord, streams, or other external sources.</li>
+                            <li>Player names, locations, and activities learned OOC cannot be used IC.</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="artikel-6-beroepskleding">Article 6 - Professional Clothing</h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon primary">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4>Professional Attire - Category 1-2</h4>
+                        </div>
+                        <ol>
+                            <li>Players in professional roles must wear appropriate clothing.</li>
+                            <li>Emergency services, government officials, and business employees included.</li>
+                            <li>Failure to maintain professional appearance may result in job loss.</li>
+                        </ol>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Schedule Roleplay Community. All rights reserved.</p>
+            <p>Last updated: October 2025 | <a href="https://github.com/George00808/ScheduleRoleplay.github.io" style="color: #60a5fa;">View on GitHub</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('h2[id], h3[id]');
+            const navLinks = document.querySelectorAll('.nav-item');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    currentSection = section.id;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

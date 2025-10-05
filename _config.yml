@@ -1,0 +1,30 @@
+# GitHub Pages Configuration for Schedule Roleplay
+title: "Schedule Roleplay"
+description: "Official community rules and guidelines for Schedule Roleplay server"
+url: "https://george00808.github.io"
+baseurl: "/ScheduleRoleplay.github.io"
+
+# Theme and plugins
+theme: null
+plugins: []
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages settings
+github:
+  repository_name: "ScheduleRoleplay.github.io"
+  repository_url: "https://github.com/George00808/ScheduleRoleplay.github.io"
+
+# SEO and social
+author: "Schedule Roleplay Team"
+social:
+  - name: "GitHub"
+    url: "https://github.com/George00808/ScheduleRoleplay.github.io"
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - .git/
